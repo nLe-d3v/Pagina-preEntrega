@@ -1,0 +1,41 @@
+/* <div class="tarjeta">
+                <img class="tarjeta_img" src="../assets/img/pexels-momo-2144383.jpg" alt="">
+                <h3 class="tarjeta_titulo">Buzo-OverLife</h3>
+                <p class="precio">3500 ARS$</p>
+                <a class="tarjeta_boton" href="">Comprar</a>
+            </div> */
+
+            /* .tarjeta{
+                padding: 20px;
+                border: 1.5px solid black;
+                animation-name: cambiocolor;
+                animation-duration: 2s;
+                transition-duration: 5s;
+            }
+            
+            .tarjeta_titulo{
+                margin-bottom: 5px;
+            }
+            
+            .tarjeta_img{
+                height: 150px;
+                width: 180px;
+                padding: 15px;
+            }
+            
+            .tarjeta a{
+                text-decoration: none;
+                color: black;
+                border: solid black 2.5px;
+                border-radius: 10px;
+                padding: 8px;
+                font-weight: bold;
+            }                */
+
+            /* .tarjeta a:hover{
+                background-color: black;
+                color: white;
+                padding: 12px;
+                transition-duration: 0.5s;
+            }
+             */

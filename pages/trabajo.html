@@ -6,52 +6,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajo</title>
-    <link rel="stylesheet" href="../styles/style_trabajo.css">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/style_index.css">
 </head>
 
 <body>
-    <header class="head">
-        <div class="head_cont">
-            <h1><a href="index.html">C-C</a></h1>
-        </div>
-        <nav class="nav">
-            <ul class="nav_content">
-                <li><a href="producto.html">Productos</a></li>
-                <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="trabajo.html">Trabajo</a></li>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#" id="marca">C-C</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto ">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Trabaja para nosotros</h2>
+            <h5 class="text-center mt-3">Completa el siguiente formulario</h5>
+            <form>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mt-2">
+                        <input type="text" class="form-control" placeholder="Nombres">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mt-2">
+                        <input type="text" class="form-control tex" placeholder="Apellidos">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mt-2">
+                        <input type="number" class="form-control" placeholder="Edad">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mt-2">
+                        <input type="date" class="form-control" placeholder="Fecha de nacimiento">
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <label for="inputAddress">Calle</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <label for="inputAddress2">Dep,Piso,etc..</label>
+                        <input type="text" class="form-control" id="inputAddress2"
+                            placeholder="Apartment, studio, or floor">
+                    </div>
 
-    <section class="container_datos">
-        <div class="content_datos">
-            <h2 class="titulo_datos">
-                <form action="" class="form_datos">Trabaja para nosotros
-            </h2>
-            <p class="texto_entrada1" for="">Fecha de nacimiento</p>
-            <input type="date" class="datos_entrada">
-            <p for="texto_entrada2">Email</p>
-            <input type="email" class="datos_entrada">
-            <p for="" class="texto_entrada3">Numero de telefono</p>
-            <input type="number" class="datos_entrada">
-            <div class="exp_datos">
-                <h4 for="" class="exp_titulo">Tu experiencia laboral o algun detalle tuyo</h4>
-                <textarea name=""></textarea>
-            </div>
-            </form>
-            <form action="">
-                <input type="submit" class="boton_entrada">
-
+                    <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <label for="inputCity">Ciudad</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                        <label for="inputState">Distrito , etc..</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <label for="inputZip">Codigo Postal</label>
+                        <input type="text" class="form-control" id="inputZip" placeholder="CPA">
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <label for="inputZip">Numero de telefono</label>
+                        <input type="text" class="form-control" id="inputNumber" placeholder="+549--">
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-2">
+                        <div class="form-group text-center">
+                            <label class="mb-2 mt-2" for="exampleFormControlTextarea1">Comentanos tus experiencias
+                                laborales</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        </div>
+                    </div>
             </form>
         </div>
-    </section>
+    </div>
 
-    <section class="pie">
-        <footer class="pie_content">
-            <p class="pie_p">&copy;C-C es una marca distribuida internacionalmente con liencia de Include Clothes (Miami - EEUU).Todos los derechos reservados &copy;CC &copy;IncludeClothes</p>
-        </footer>
-    </section>
+    <footer class="bg-black text-center" style="color:white;">
+        <p class="pie_p">&copy;C-C es una marca distribuida internacionalmente con liencia de Include Clothes (Miami
+            - EEUU).Todos los derechos reservados &copy;CC &copy;IncludeClothes</p>
+    </footer>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

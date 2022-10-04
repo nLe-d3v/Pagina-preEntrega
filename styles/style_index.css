@@ -122,46 +122,12 @@ nav{
     }
 }
 
-.tarjeta{
-    padding: 20px;
-    border: 1.5px solid black;
-    animation-name: cambiocolor;
-    animation-duration: 2s;
-    transition-duration: 5s;
-}
 
-
-
-.tarjeta_titulo{
-    margin-bottom: 5px;
-}
-
-.tarjeta_img{
-    height: 200px;
-    width: 200px;
-    padding: 15px;
-}
-
-.tarjeta a{
-    text-decoration: none;
-    color: black;
-    border: solid black 2.5px;
-    border-radius: 10px;
-    padding: 8px;
-    font-weight: bold;
-}   
 
 .precio{
     color: green;
     padding:5px;
     font-size: 20px;
-}
-
-.tarjeta a:hover{
-    background-color: black;
-    color: white;
-    padding: 12px;
-    transition-duration: 0.5s;
 }
 
 img{
@@ -242,4 +208,16 @@ label{
 
 .google-maps{
     object-fit: cover;
+}
+
+/* Productos */
+
+.btn{
+    background-color: black;
+    color: white;
+}
+
+#row{
+    justify-content: center;
+    align-items: center;
 }
