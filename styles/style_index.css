@@ -9,10 +9,10 @@ body{
     background-color: white;
 }
 
-nav{
+#barra_nav{
     background-color: lightgray;
-    height: 90px;
-    color: white;
+    height:80px;
+    font-size: 1.3rem;
 }
 
 #marca{
@@ -178,6 +178,8 @@ img{
     text-align: center;
 }
 
+/* CONTACTO */
+
 .texto_form{
     font-size: 20px;
     text-align:center;
@@ -210,6 +212,7 @@ label{
     object-fit: cover;
 }
 
+
 /* Productos */
 
 .btn{
@@ -217,7 +220,15 @@ label{
     color: white;
 }
 
-#row{
+#col_productos{
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.texto_envio{
+    width:100%;
+    color: white;
+    background-color: black;
+    text-align: center;
 }
