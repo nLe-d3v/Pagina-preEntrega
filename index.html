@@ -6,109 +6,85 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio C-C</title>
-  <link rel="stylesheet" href="styles/style_index.css">
-  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html" id="marca">C-C</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Inicio <span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
-        </li> <li class="nav-item">
-          <a class="nav-link" href="./pages/trabajo.html">Trabajo</a>
-        <li class="nav-item dropdown">
-        </li> <li class="nav-item">
-          <a class="nav-link" href="./pages/producto.html">Productos</a>
-        <li class="nav-item dropdown">
-    </div>
-  </nav>
-
-  <section class="intro">
-    <div class="intro_content">
-      <h1>Explora tu comodidad</h1>
-      <p>La nueva moda ha llegado para nuestros clientes , toda la linea nueva
-        de C-C esta aqui presente para marcar la diferencia.
-        Explora nuestro catalogo para descubrir todas nuestras prendas nuevas
-        y ademas te ofrecemos distintas ofertas dependiendo de tus compras.
-      </p>
-      <div class="boton">
-        <a class="boton_link" href="./pages/producto.html">Ver Productos</a>
+  <div class="row">
+    <div class="header col-8">
+      <div class="logo">
+        <a href="index.html" id="marca">
+          <img src="assets/img_marca/marca-logo-PhotoRoom.png" alt="" id="marca">
+        </a>
       </div>
+      <nav class="nav">
+        <ul class="nav_ul">
+          <li><a class="boton_nav" href="pages/producto.html">PRODUCTOS</a></li>
+          <li><a class="boton_nav" href="pages/contacto.html">CONTACTO</a></li>
+          <li><a class="boton_nav" href="pages/trabajo.html">TRABAJO</a></li>
+          <li><a class="boton_nav" href="pages/nosotros.html">NOSOTROS</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center" id="col_index">
-        <h3>Encontra todo lo que estas buscando</h3>
-        <p>Nos enfocamos en brindar la mejor calidad a nuestros clientes y un amplio
-          catalogo para todos los gustos , desde buzos , remeras , pantalones y mucho mas.
-          C-C es una marca hecha para nuestros compradores , escuchando sus comentarios e 
-          ideas , combinando nuestra calidad textil y nuestra mano de trabajo.Cada vez estamos
-          mas cerca de nuestro objetivo , sumate a descubrir lo que C-C tiene para vos.
+    <div class="intro col-4">
+      <div class="intro__texto">
+        <h1>Explora tu comodidad</h1>
+        <p>La nueva moda ha llegado para nuestros clientes , toda la linea nueva
+          de Include esta aqui presente para marcar la diferencia.
+          Explora nuestro catalogo para descubrir todas nuestras prendas nuevas
+          y ademas te ofrecemos distintas ofertas dependiendo de tus compras.
         </p>
       </div>
     </div>
   </div>
 
-  <div id="carouselExampleSlidesOnly" class="carousel slide mt-3" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100 img_carousel" src="assets/img/index-carousel.jpg" alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100 img_carousel" src="assets/img/index-carousel2.jpg" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100 img_carousel" src="assets/img/pexels-styves-exantus-9958975.jpg" alt="Four slide">
-      </div>
-    </div>
-    <div class="carousel-caption d-none d-md-block" id="carousel_text">
-      <p>Buscas nuevos rumbos?</p>
-      <h4>C-C tiene diferentes caminos
-      </h4>
+
+  <div class="row">
+    <div class="intro2 col-4 p-5">
+      <h3>Encontra todo lo que estas buscando</h3>
+      <p>Nos enfocamos en brindar la mejor calidad a nuestros clientes y un amplio
+        catalogo para todos los gustos , desde buzos , remeras , pantalones y mucho mas.
+        Include es una marca hecha para nuestros compradores , escuchando sus comentarios e
+        ideas , combinando nuestra calidad textil y nuestra mano de trabajo.Cada vez estamos
+        mas cerca de nuestro objetivo , sumate a descubrir lo que C-C tiene para vos.
+      </p>
     </div>
   </div>
 
-  <section class="horario">
-    <div class="cont__horario">
-      <h3>HORARIO DE ATENCION</h3>
-      <p>Lunes a viernes: 8:00 hasta 20:00</p>
-      <p>Sabados: 10:00 hasta 24:00s</p>
-    </div>
-  </section>
+  <div class="vacio">
+    <p></p>
+  </div>
 
+  <div class="vacio">
+    <p></p>
+  </div>
 
   <footer class="pie">
-    <p class="pie_p">&copy;C-C es una marca distribuida internacionalmente con liencia de Include Clothes (Miami
-      - EEUU).Todos los derechos reservados &copy;CC &copy;IncludeClothes</p>
+    <div class="redes">
+      <h5 class="texto_redes">Seguinos en nuestras redes sociales</h5>
+      <img id="redes_icon" src="../assets/img/instagram.png" alt="">
+      <label><a href="" class="text-decoration-none text-black">Instagram</a></label>
+      <img id="redes_icon" src="../assets/img/facebook.png">
+      <label><a href="" class="text-decoration-none text-black">Facebook</a></label>
+      <img id="redes_icon" src="../assets/img/gorjeo.png">
+      <label><a href="" class="text-decoration-none text-black">Twitter</a></label>
+      <img id="redes_icon" src="../assets/img/whatsapp.png">
+      <label><a href="" class="text-decoration-none text-black">Whatsapp</a></label>
+    </div>
+    <p class="pie_p">&copy; Include Clothes 2022 </p>
   </footer>
-
   <!-- CDN -->
-  <!-- ssss -->
-  
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-  crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-  crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-  crossorigin="anonymous"></script>
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

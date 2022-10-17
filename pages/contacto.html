@@ -5,68 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/style_index.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <title>Contacto</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html" id="marca">C-C</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Inicio <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
-            </li> <li class="nav-item">
-              <a class="nav-link" href="./pages/trabajo.html">Trabajo</a>
-            <li class="nav-item dropdown">
-            </li> <li class="nav-item">
-              <a class="nav-link" href="./pages/producto.html">Productos</a>
-            <li class="nav-item dropdown">
-        </div>
-      </nav>
-
-    <div class="container-fluid p-4">
-        <div class="row" style="background-color:lightgray;">
-            <div class="col col-sm-12 col-md-12 col-lg-6 col-xl-6 justify-content-center text-center pt-3">
-                <h5 class="texto_form">Si tienes alguna queja o duda, no dudes
-                    en contactarnos.</h5>
-                <form>
-                    <div class="form-group pb-3">
-                        <label for="exampleFormControlInput1">Ingresa tu correo</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="nombre@ejemplo.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Comenta tu experiencia en nuestra tienda </label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                </form>
+    <div class="row">
+        <div class="header col-8">
+            <div class="logo">
+                <a href="index.html" id="marca">
+                    <img src="../assets/img_marca/marca-logo-PhotoRoom.png" alt="" id="marca">
+                </a>
             </div>
-            <div class="col col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center pt-3">
-                <h5 class="texto_redes">Seguinos en nuestras redes sociales</h5>
-                <img id="redes_icon" src="../assets/img/instagram.png" alt="">
-                <p><a href="" class="text-decoration-none text-black">Instagram</a></p>
-                <img id="redes_icon" src="../assets/img/facebook.png">
-                <p><a href="" class="text-decoration-none text-black">Facebook</a></p>
-                <img id="redes_icon" src="../assets/img/gorjeo.png">
-                <p><a href="" class="text-decoration-none text-black">Twitter</a></p>
-                <img id="redes_icon" src="../assets/img/whatsapp.png">
-                <p><a href="" class="text-decoration-none text-black">Whatsapp</a></p>
-            </div>
-
+            <nav class="nav">
+                <ul class="nav_ul">
+                    <li><a class="boton_nav" href="pages/producto.html">PRODUCTOS</a></li>
+                    <li><a class="boton_nav" href="pages/contacto.html">CONTACTO</a></li>
+                    <li><a class="boton_nav" href="pages/trabajo.html">TRABAJO</a></li>
+                    <li><a class="boton_nav" href="pages/nosotros.html">NOSOTROS</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
+
+
+    <div class="col-12 text-center pt-3">
+        <h5 class="texto_redes">Seguinos en nuestras redes sociales</h5>
+        <img id="redes_icon" src="../assets/img/instagram.png" alt="">
+        <label><a href="" class="text-decoration-none text-black">Instagram</a></label>
+        <img id="redes_icon" src="../assets/img/facebook.png">
+        <label><a href="" class="text-decoration-none text-black">Facebook</a></label>
+        <img id="redes_icon" src="../assets/img/gorjeo.png">
+        <label><a href="" class="text-decoration-none text-black">Twitter</a></label>
+        <img id="redes_icon" src="../assets/img/whatsapp.png">
+        <label><a href="" class="text-decoration-none text-black">Whatsapp</a></label>
     </div>
 
     <div class="container">
@@ -79,9 +52,8 @@
         </div>
     </div>
 
-    <footer class="container-fluid bg-black m-0 text-center" style="color:white;">
-        <p class="pie_p">&copy;C-C es una marca distribuida internacionalmente con liencia de Include Clothes (Miami
-            - EEUU).Todos los derechos reservados &copy;CC &copy;IncludeClothes</p>
+    <footer class="pie">
+        <p class="pie_p">&copy; Include Clothes 2022 </p>
     </footer>
 
     <!-- CDN -->

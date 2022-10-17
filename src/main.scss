@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-image: url(/assets/img/body_fondo2.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: initial;
+}
+
+// -------------INDEX------------
+
+.header{
+    transition-duration: 2s;
+}
+
+.logo {
+    display: flex;
+    padding: 10px;
+}
+
+.nav_ul {
+    list-style: none;
+
+    li {
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    li>a{
+        color: white;
+        text-decoration: none;
+        margin: 10px;
+    
+        &:hover{
+            color: black;
+            font-size: 25px;
+            transition-duration: 0.5s;
+        }
+    }
+}
+
+.intro {
+    transition-duration: 2s;
+    justify-content: baseline;
+    align-items: flex-end;
+    padding: 30px;
+}
+
+.intro__texto {
+    color: white;
+    margin: 10px;
+    line-height: 30px;
+    font-weight: 900;
+    text-align: end;
+    padding: 5px;
+    animation-name: mover-texto;
+    animation-duration: 1s;
+}
+
+
+.intro2 {
+    color: white;
+    min-width: 100px;
+    max-width: 200px;
+    line-height: 30px;
+    font-weight: 900;
+    transition-duration: 1.5s;
+}
+
+@keyframes mover-texto {
+    25% {
+        transform: translateX(700px);
+    }
+
+    50% {
+        transform: trasnslateX(200px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+.horario {
+    order: 1 -4 3 4;
+    color: white;
+    text-align: center;
+}
+
+.vacio {
+    height: 100px;
+    width: 100px;
+}
+
+// -------------------------------------------
+
+.pie {
+    text-align: center;
+
+    &.redes>label a{
+        margin: 10px;
+    }
+}
+
+.pie_p {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#redes_icon{
+    width: 30px;
+    height: 30px;
+}
