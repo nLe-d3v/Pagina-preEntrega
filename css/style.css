@@ -89,17 +89,28 @@ body {
   width: 100px;
 }
 
-.pie {
+.pie_div {
   text-align: center;
 }
-.pie.redes > label a {
-  margin: 10px;
+.pie_div.redes > .redes_div > label a {
+  margin: 15px;
+}
+
+.redes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .pie_p {
   color: white;
   font-weight: bold;
   font-size: 20px;
+}
+
+.redes_div {
+  padding: 10px;
 }
 
 #redes_icon {
