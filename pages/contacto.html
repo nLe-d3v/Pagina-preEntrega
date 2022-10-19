@@ -12,43 +12,63 @@
 
 <body>
     <div class="row">
-        <div class="header col-8">
+        <div class="header col-xl-4 col-lg-4 col-md-4 col-sm-4">
             <div class="logo">
-                <a href="index.html" id="marca">
+                <a href="../index.html" id="marca">
                     <img src="../assets/img_marca/marca-logo-PhotoRoom.png" alt="" id="marca">
                 </a>
             </div>
             <nav class="nav">
                 <ul class="nav_ul">
-                    <li><a class="boton_nav" href="pages/producto.html">PRODUCTOS</a></li>
-                    <li><a class="boton_nav" href="pages/contacto.html">CONTACTO</a></li>
-                    <li><a class="boton_nav" href="pages/trabajo.html">TRABAJO</a></li>
-                    <li><a class="boton_nav" href="pages/nosotros.html">NOSOTROS</a></li>
+                    <li><a class="boton_nav" href="../pages/producto.html">PRODUCTOS</a></li>
+                    <li><a class="boton_nav" href="../pages/contacto.html">CONTACTO</a></li>
+                    <li><a class="boton_nav" href="../pages/trabajo.html">TRABAJO</a></li>
+                    <li><a class="boton_nav" href="../pages/nosotros.html">NOSOTROS</a></li>
                 </ul>
             </nav>
         </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 p-5">
+            <h3>Contactanos</h3>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1"></label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1"></label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="@Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1"></label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Numero de telefono">
+                </div>
+                <div class="botonform_div">
+                    <input type="submit" value="Enviar" class="boton_form">
+                </div>
+            </form>
+        </div>
+
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 p-5">
+            <h3>Comentanos tu experiencia</h3>
+            <form action="">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                </div>
+            </form>
+        </div>
     </div>
 
-
-    <div class="col-12 text-center pt-3">
-        <h5 class="texto_redes">Seguinos en nuestras redes sociales</h5>
-        <img id="redes_icon" src="../assets/img/instagram.png" alt="">
-        <label><a href="" class="text-decoration-none text-black">Instagram</a></label>
-        <img id="redes_icon" src="../assets/img/facebook.png">
-        <label><a href="" class="text-decoration-none text-black">Facebook</a></label>
-        <img id="redes_icon" src="../assets/img/gorjeo.png">
-        <label><a href="" class="text-decoration-none text-black">Twitter</a></label>
-        <img id="redes_icon" src="../assets/img/whatsapp.png">
-        <label><a href="" class="text-decoration-none text-black">Whatsapp</a></label>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-                <h3>Nuestra ubicacion</h3>
-                <img src="../assets/img/google-maps2.jpg" alt="" class="google-maps col-sm-12 col-md-12">
-                <p class="pt-2">Buenos Aires , Parque Chacabuco</p>
-            </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3>Nuestra ubicacion</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.3850476714115!2d-58.43305300874303!3d-34.635249716310426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbb7065d907f%3A0x9ce77385d2f35dd3!2sParque%20Chacabuco%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1666103227280!5m2!1ses-419!2sar"
+                width="" height="" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="google-maps">
+            </iframe>
+            <p class="pt-2">Buenos Aires , Parque Chacabuco</p>
         </div>
     </div>
 

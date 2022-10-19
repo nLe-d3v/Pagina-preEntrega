@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url(../assets/img/body_fondo2.jpg);
+  background-image: url(../assets/fondo/body_fondo2.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: initial;
@@ -16,7 +16,6 @@ body {
 }
 
 .logo {
-  display: flex;
   padding: 10px;
 }
 
@@ -107,6 +106,8 @@ body {
   color: white;
   font-weight: bold;
   font-size: 20px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .redes_div {
@@ -116,6 +117,112 @@ body {
 #redes_icon {
   width: 30px;
   height: 30px;
+}
+
+.botonform_div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.boton_form {
+  height: 40px;
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+}
+
+#marca {
+  width: 600px;
+  height: 100px;
+}
+
+.google-maps {
+  width: 70%;
+  height: 400px;
+}
+
+.texto_envio {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.productos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  gap: 30px;
+}
+
+.tarjeta {
+  width: 20rem;
+  height: 32rem;
+  background-color: rgba(255, 255, 255, 0.301);
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+}
+.tarjeta .img {
+  height: 60%;
+}
+.tarjeta .texto {
+  margin-top: 15px;
+}
+.tarjeta .precio {
+  font-size: 20px;
+}
+.tarjeta .boton_compra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  margin: auto;
+  background-color: black;
+  border-radius: 10px;
+}
+.tarjeta .boton_compra > a {
+  text-decoration: none;
+  color: white;
+}
+
+#img_tarjeta {
+  width: 65%;
+  height: 100%;
+}
+
+@media (max-width: 420px) {
+  #marca {
+    width: 80%;
+    height: 85px;
+  }
+  #redes_icon {
+    width: 20px;
+    height: 20px;
+  }
+  .boton_form {
+    height: 40px;
+    width: 70%;
+  }
+  .tarjeta {
+    width: 18rem;
+    height: 24rem;
+  }
+  .texto_envio {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
