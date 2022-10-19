@@ -203,6 +203,42 @@ body {
   height: 100%;
 }
 
+.info_titulo {
+  color: white;
+}
+
+.texto_info {
+  color: white;
+}
+
+.img_nosotros_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+}
+
+.img_nosotros_div2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+}
+
+#img_nosotros {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#img_nosotros2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 420px) {
   #marca {
     width: 80%;
@@ -214,6 +250,45 @@ body {
   }
   .boton_form {
     height: 40px;
+    width: 70%;
+  }
+  .tarjeta {
+    width: 18rem;
+    height: 24rem;
+  }
+  .texto_envio {
+    font-size: 18px;
+  }
+  .img_nosotros_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    margin: 6px;
+  }
+  .img_nosotros_div2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    margin: 6px;
+  }
+  #img_nosotros {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #img_nosotros2 {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 839px) {
+  .boton_form {
+    height: 60px;
     width: 70%;
   }
   .tarjeta {
