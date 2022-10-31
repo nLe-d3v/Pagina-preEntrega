@@ -1,3 +1,19 @@
+// Mixins
+
+@mixin flex-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// ------------------------------------
+
+// Variables
+
+$gris-transparente :rgba(255, 255, 255, 0.434);
+$negro : black;
+$blanco: white;
+
+// -------------------------------------
 * {
     margin: 0;
     padding: 0;
@@ -5,39 +21,62 @@
 }
 
 body {
-    background-image: url(../assets/fondo/body_fondo2.jpg);
+    background-image: url(../assets/fondo/body_fondo.jpg);
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: initial;
 }
 
 // -------------INDEX------------
 
 .header {
     transition-duration: 2s;
+    @include flex-row();
+    justify-content: space-around;
+    align-items: center;
 }
 
 .logo {
     padding: 10px;
+
+    #marca {
+        width: 600px;
+        height: 100px;
+        animation-duration: 1s;
+        animation-name: marca;
+    }
+}
+
+@keyframes marca {
+    0% {
+        transform: translate(-200%);
+    }
+
+    100% {
+        transform: translate(0%);
+
+    }
 }
 
 .nav_ul {
     list-style: none;
+    @include flex-row();
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    font-size: 30px;
 
     li {
-        margin-top: 15px;
-        font-size: 20px;
+        margin-top: 4%;
         font-weight: bold;
         font-style: italic;
     }
 
     li>a {
-        color: white;
+        color: $blanco;
         text-decoration: none;
-        margin: 10px;
 
         &:hover {
-            color: black;
+            color: $negro;
             font-size: 25px;
             transition-duration: 0.5s;
         }
@@ -45,95 +84,135 @@ body {
 }
 
 .intro {
-    transition-duration: 2s;
-    justify-content: baseline;
-    align-items: flex-end;
-    padding: 30px;
+    margin-top: 20px;
+    padding: 10px;
 }
 
-.intro__texto {
-    color: white;
-    margin: 10px;
-    line-height: 30px;
-    font-weight: 900;
-    text-align: end;
-    padding: 5px;
-    animation-name: mover-texto;
-    animation-duration: 1s;
-}
-
-
-.intro2 {
-    color: white;
-    min-width: 100px;
-    max-width: 200px;
-    line-height: 30px;
-    font-weight: 900;
+#intro1 {
+    color: $blanco;
+    line-height: 35px;
+    font-size: 22px;
+    text-align: center;
     transition-duration: 1.5s;
+    padding: 50px;
 }
 
-@keyframes mover-texto {
-    25% {
-        transform: translateX(700px);
-    }
-
-    50% {
-        transform: trasnslateX(200px);
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
-}
-
-
-.horario {
-    order: 1 -4 3 4;
-    color: white;
+#intro2 {
     text-align: center;
+    color: $blanco;
+    font-size: 22px;
+    line-height: 35px;
+    transition-duration: 1.5s;
+    padding: 50px;
 }
 
-.vacio {
-    height: 100px;
-    width: 100px;
-}
+#intro3 {
+    color: $blanco;
+    font-size: 22px;
+    line-height: 35px;
+    padding: 50px;
 
-// -------------------------------------------
-
-.pie_div {
-    text-align: center;
-
-    &.redes>.redes_div>label a {
-        margin: 15px;
+    &>p {
+        text-align: center;
     }
 }
 
-.redes {
+.texto_destacados {
     display: flex;
-    flex-flow: row wrap;
+    text-align: center;
+    background-color: $gris-transparente;
+    width: 100%;
+    height: 70px;
+    color: $blanco;
     justify-content: center;
     align-items: center;
 }
 
-.pie_p {
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
+.horario_redes {
+    color: $negro;
+    background-color: $gris-transparente;
+
+    .horario {
+        @include flex-row();
+    }
+
+    .redes {
+        @include flex-row();
+        justify-content: space-evenly;
+    }
+
+    .horario_titulo {
+        text-align: center;
+        width: 100%;
+        margin: 20px;
+    }
+
+    .semana_horario {
+        width: 50%;
+        text-align: center;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        font-size: 20px;
+    }
+
+    .finde_horario {
+        width: 50%;
+        text-align: center;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        font-size: 20px;
+    }
+
+    .redes {
+        color: $negro;
+        text-align: center;
+        width: 50%;
+        padding-top: 23px;
+
+        .redes_link {
+            color: $negro;
+            text-decoration: none;
+            margin-top: 5px;
+        }
+
+        #redes_icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .redes_div {
+            padding: 10px;
+        }
+    }
+}
+
+.texto_pie {
+    color: $negro;
+    width: 100%;
     text-align: center;
-    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 
-.redes_div {
-    padding: 10px;
+
+.pie {
+    background-color: $negro;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pie_p {
+    color: $blanco;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
 }
 
 // ---CONTACTO-----------------
 
-#redes_icon {
-    width: 30px;
-    height: 30px;
-}
 
 .botonform_div {
     display: flex;
@@ -147,20 +226,21 @@ body {
 .boton_form {
     height: 40px;
     width: 100%;
-    border: 2px solid white;
+    border: 2px solid $blanco;
     border-radius: 8px;
-    background-color: white;
-    color: black;
+    background-color: $blanco;
+    color: $negro;
 }
 
-#marca {
-    width: 600px;
-    height: 100px;
-}
 
 .google-maps {
     width: 70%;
     height: 400px;
+}
+
+.google-map {
+    font-size: 25px;
+    color: $blanco;
 }
 
 // ---------------------------------------
@@ -170,9 +250,11 @@ body {
 
 .texto_envio {
     text-align: center;
-    color: white;
+    color: $blanco;
     font-weight: bold;
     font-size: 30px;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 .productos {
@@ -188,21 +270,25 @@ body {
 .tarjeta {
     width: 20rem;
     height: 32rem;
-    background-color: rgba(255, 255, 255, 0.301);
+    background-color: $gris-transparente;
     text-align: center;
-    border: 2px solid white;
+    border: 2px solid $blanco;
     border-radius: 8px;
     padding: 10px;
-    color: white;
+    color: $blanco;
+
     .img {
         height: 60%;
     }
-    .texto{
+
+    .texto {
         margin-top: 15px;
     }
-    .precio{
+
+    .precio {
         font-size: 20px;
     }
+
     .boton_compra {
         display: flex;
         justify-content: center;
@@ -210,15 +296,16 @@ body {
         width: 50%;
         height: 40px;
         margin: auto;
-        background-color: black;
+        background-color: $negro;
         border-radius: 10px;
+
         &>a {
             text-decoration: none;
-            color: white;
+            color: $blanco;
+            font-size: 20px;
         }
     }
 }
-
 
 
 #img_tarjeta {
@@ -230,38 +317,49 @@ body {
 
 // NOSOTROS
 
-
-.info_titulo{
-    color: white;
+.historia{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-.texto_info{
-    color: white;
+.info_titulo {
+    color: $blanco;
 }
 
-.img_nosotros_div{
+#texto_info {
+    color: $blanco;
+    font-size: 20px;
+}
+
+#row_nosotros {
+    background-color: $gris-transparente;
+}
+
+.img_nosotros_div {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 600px;
+    padding: 10px;
 }
 
-.img_nosotros_div2{
+.img_nosotros_div2 {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 600px;
+    padding: 10px;
 }
 
-#img_nosotros{
+#img_nosotros {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-#img_nosotros2{
+#img_nosotros2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -273,10 +371,17 @@ body {
 //MEDIAS --------------------------------------------------------
 // Me quede modificando la imagen de la marca , haciendo responsive al site
 
-@media (max-width: 420px){
-    #marca {
-        width: 80%;
-        height: 85px;
+
+@media (max-width: 440px) {
+    .header {
+        .logo {
+            width: 100%;
+
+            #marca {
+                width: 90%;
+                height: 65px;
+            }
+        }
     }
 
     #redes_icon {
@@ -291,14 +396,32 @@ body {
 
     .tarjeta {
         width: 18rem;
-        height: 24rem;
+        height: 26rem;
+
+        .texto>h4 {
+            font-size: 18px;
+        }
+
+        .precio>p {
+            font-size: 18px;
+        }
     }
 
     .texto_envio {
-        font-size: 18px;
+        .titulo_descuento {
+            font-size: 16px;
+        }
     }
-    
-    .img_nosotros_div{
+
+    .img_nosotros_div {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        height: 500px;
+        padding: 0px;
+    }
+
+    .img_nosotros_div2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -306,30 +429,90 @@ body {
         height: 400px;
         margin: 6px;
     }
-    
-    .img_nosotros_div2{
-        display: flex;
-        justify-content:center;
-        align-items: center;
+
+
+    #img_nosotros2 {
         width: 100%;
-        height: 400px;
-        margin: 6px;
-    }
-    
-    #img_nosotros{
-        width: 60%;
         height: 100%;
         object-fit: cover;
     }
-    
-    #img_nosotros2{
-        width: 80%;
-        height: 100%;
-        object-fit: cover;
+
+    #intro1 {
+        font-size: 10px;
+        padding: 10px;
+        line-height: 23px;
+    }
+
+    #intro2 {
+        font-size: 10px;
+        padding: 10px;
+        line-height: 23px;
+    }
+
+    #intro3 {
+        font-size: 10px;
+        padding: 10px;
+        line-height: 23px;
+    }
+
+    .nav {
+        .nav_ul {
+            gap: 15px;
+            padding: 2px;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+
+            .boton_nav {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .redes {
+        .redes_div {
+            padding: 0px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .texto_index {
+        font-size: 15px;
+    }
+
+    .tarjeta {
+        .boton_compra>a {
+            font-size: 15px;
+        }
+
+    }
+
+    .historia{
+        padding-top: 30px;
+        #texto_info{
+            font-size: 12px;
+        }
+    }
+
+    .google-map>p{
+        font-size: 15px;
     }
 }
 
-@media (max-width:839px){
+
+@media (max-width:839px) {
+
+    .nav_ul {
+        gap: 20px;
+        padding: 10px;
+        margin: 0;
+    }
+
     .boton_form {
         height: 60px;
         width: 70%;
@@ -341,6 +524,104 @@ body {
     }
 
     .texto_envio {
-        font-size: 18px;
+        font-size: 25px;
+        margin-top: 60px;
+    }
+
+    .horario_redes {
+        display: flex;
+        flex-flow: column wrap;
+
+        .semana_horario {
+            width: 100%;
+
+        }
+
+        .finde_horario {
+            width: 100%;
+        }
+    }
+
+    #img_nosotros {
+        height: 500px;
+        padding: 10px;
+        width: 50%;
+    }
+}
+
+@media (max-width:610px) {
+    #img_nosotros {
+        height: 500px;
+        padding: 20px;
+        width: 50%;
+    }
+
+    #img_nosotros2 {
+        padding: 20px;
+    }
+
+    .logo {
+        padding: 5px;
+    }
+
+    #marca {
+        width: 400px;
+    }
+
+    .nav_ul {
+        // padding: 0px;
+        font-size: 24px;
+    }
+}
+
+@media (min-width:950px) {
+    .intro {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .intro1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .intro2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .intro3 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width:990px) {
+    #img_nosotros {
+        height: 500px;
+        padding: 10px;
+        width: 50%;
+    }
+}
+
+@media (max-width:956px) {
+    .productos {
+        .tajeta {
+            height: 200px;
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .nav_ul {
+        li {
+            font-size: 22px;
+        }
+    }
+
+    .logo {
+        #marca {
+            width: 400px;
+        }
     }
 }

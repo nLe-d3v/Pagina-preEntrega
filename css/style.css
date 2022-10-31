@@ -5,33 +5,54 @@
 }
 
 body {
-  background-image: url(../assets/fondo/body_fondo2.jpg);
+  background-image: url(../assets/fondo/body_fondo.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: initial;
 }
 
 .header {
   transition-duration: 2s;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .logo {
   padding: 10px;
 }
+.logo #marca {
+  width: 600px;
+  height: 100px;
+  animation-duration: 1s;
+  animation-name: marca;
+}
 
+@keyframes marca {
+  0% {
+    transform: translate(-200%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
 .nav_ul {
   list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  font-size: 30px;
 }
 .nav_ul li {
-  margin-top: 15px;
-  font-size: 20px;
+  margin-top: 4%;
   font-weight: bold;
   font-style: italic;
 }
 .nav_ul li > a {
   color: white;
   text-decoration: none;
-  margin: 10px;
 }
 .nav_ul li > a:hover {
   color: black;
@@ -40,64 +61,111 @@ body {
 }
 
 .intro {
-  transition-duration: 2s;
-  justify-content: baseline;
-  align-items: flex-end;
-  padding: 30px;
+  margin-top: 20px;
+  padding: 10px;
 }
 
-.intro__texto {
+#intro1 {
   color: white;
-  margin: 10px;
-  line-height: 30px;
-  font-weight: 900;
-  text-align: end;
-  padding: 5px;
-  animation-name: mover-texto;
-  animation-duration: 1s;
-}
-
-.intro2 {
-  color: white;
-  min-width: 100px;
-  max-width: 200px;
-  line-height: 30px;
-  font-weight: 900;
+  line-height: 35px;
+  font-size: 22px;
+  text-align: center;
   transition-duration: 1.5s;
+  padding: 50px;
 }
 
-@keyframes mover-texto {
-  25% {
-    transform: translateX(700px);
-  }
-  50% {
-    transform: trasnslateX(200px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-.horario {
-  order: 1 -4 3 4;
+#intro2 {
+  text-align: center;
   color: white;
+  font-size: 22px;
+  line-height: 35px;
+  transition-duration: 1.5s;
+  padding: 50px;
+}
+
+#intro3 {
+  color: white;
+  font-size: 22px;
+  line-height: 35px;
+  padding: 50px;
+}
+#intro3 > p {
   text-align: center;
 }
 
-.vacio {
-  height: 100px;
-  width: 100px;
-}
-
-.pie_div {
+.texto_destacados {
+  display: flex;
   text-align: center;
-}
-.pie_div.redes > .redes_div > label a {
-  margin: 15px;
+  background-color: rgba(255, 255, 255, 0.434);
+  width: 100%;
+  height: 70px;
+  color: white;
+  justify-content: center;
+  align-items: center;
 }
 
-.redes {
+.horario_redes {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.434);
+}
+.horario_redes .horario {
   display: flex;
   flex-flow: row wrap;
+}
+.horario_redes .redes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.horario_redes .horario_titulo {
+  text-align: center;
+  width: 100%;
+  margin: 20px;
+}
+.horario_redes .semana_horario {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 20px;
+}
+.horario_redes .finde_horario {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 20px;
+}
+.horario_redes .redes {
+  color: black;
+  text-align: center;
+  width: 50%;
+  padding-top: 23px;
+}
+.horario_redes .redes .redes_link {
+  color: black;
+  text-decoration: none;
+  margin-top: 5px;
+}
+.horario_redes .redes #redes_icon {
+  width: 40px;
+  height: 40px;
+}
+.horario_redes .redes .redes_div {
+  padding: 10px;
+}
+
+.texto_pie {
+  color: black;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.pie {
+  background-color: black;
+  height: 100px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -107,16 +175,6 @@ body {
   font-weight: bold;
   font-size: 20px;
   text-align: center;
-  margin-top: 50px;
-}
-
-.redes_div {
-  padding: 10px;
-}
-
-#redes_icon {
-  width: 30px;
-  height: 30px;
 }
 
 .botonform_div {
@@ -137,14 +195,14 @@ body {
   color: black;
 }
 
-#marca {
-  width: 600px;
-  height: 100px;
-}
-
 .google-maps {
   width: 70%;
   height: 400px;
+}
+
+.google-map {
+  font-size: 25px;
+  color: white;
 }
 
 .texto_envio {
@@ -152,6 +210,8 @@ body {
   color: white;
   font-weight: bold;
   font-size: 30px;
+  margin-top: 20px;
+  padding: 10px;
 }
 
 .productos {
@@ -167,7 +227,7 @@ body {
 .tarjeta {
   width: 20rem;
   height: 32rem;
-  background-color: rgba(255, 255, 255, 0.301);
+  background-color: rgba(255, 255, 255, 0.434);
   text-align: center;
   border: 2px solid white;
   border-radius: 8px;
@@ -196,6 +256,7 @@ body {
 .tarjeta .boton_compra > a {
   text-decoration: none;
   color: white;
+  font-size: 20px;
 }
 
 #img_tarjeta {
@@ -203,12 +264,22 @@ body {
   height: 100%;
 }
 
+.historia {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .info_titulo {
   color: white;
 }
 
-.texto_info {
+#texto_info {
   color: white;
+  font-size: 20px;
+}
+
+#row_nosotros {
+  background-color: rgba(255, 255, 255, 0.434);
 }
 
 .img_nosotros_div {
@@ -217,6 +288,7 @@ body {
   align-items: center;
   width: 100%;
   height: 600px;
+  padding: 10px;
 }
 
 .img_nosotros_div2 {
@@ -225,6 +297,7 @@ body {
   align-items: center;
   width: 100%;
   height: 600px;
+  padding: 10px;
 }
 
 #img_nosotros {
@@ -239,10 +312,13 @@ body {
   object-fit: cover;
 }
 
-@media (max-width: 420px) {
-  #marca {
-    width: 80%;
-    height: 85px;
+@media (max-width: 440px) {
+  .header .logo {
+    width: 100%;
+  }
+  .header .logo #marca {
+    width: 90%;
+    height: 65px;
   }
   #redes_icon {
     width: 20px;
@@ -254,18 +330,23 @@ body {
   }
   .tarjeta {
     width: 18rem;
-    height: 24rem;
+    height: 26rem;
   }
-  .texto_envio {
+  .tarjeta .texto > h4 {
     font-size: 18px;
+  }
+  .tarjeta .precio > p {
+    font-size: 18px;
+  }
+  .texto_envio .titulo_descuento {
+    font-size: 16px;
   }
   .img_nosotros_div {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-flow: column;
     width: 100%;
-    height: 400px;
-    margin: 6px;
+    height: 500px;
+    padding: 0px;
   }
   .img_nosotros_div2 {
     display: flex;
@@ -275,18 +356,66 @@ body {
     height: 400px;
     margin: 6px;
   }
-  #img_nosotros {
-    width: 60%;
+  #img_nosotros2 {
+    width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  #img_nosotros2 {
-    width: 80%;
-    height: 100%;
-    object-fit: cover;
+  #intro1 {
+    font-size: 10px;
+    padding: 10px;
+    line-height: 23px;
+  }
+  #intro2 {
+    font-size: 10px;
+    padding: 10px;
+    line-height: 23px;
+  }
+  #intro3 {
+    font-size: 10px;
+    padding: 10px;
+    line-height: 23px;
+  }
+  .nav .nav_ul {
+    gap: 15px;
+    padding: 2px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav .nav_ul .boton_nav {
+    font-size: 18px;
+  }
+  .logo {
+    text-align: center;
+  }
+  .redes .redes_div {
+    padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .texto_index {
+    font-size: 15px;
+  }
+  .tarjeta .boton_compra > a {
+    font-size: 15px;
+  }
+  .historia {
+    padding-top: 30px;
+  }
+  .historia #texto_info {
+    font-size: 12px;
+  }
+  .google-map > p {
+    font-size: 15px;
   }
 }
 @media (max-width: 839px) {
+  .nav_ul {
+    gap: 20px;
+    padding: 10px;
+    margin: 0;
+  }
   .boton_form {
     height: 60px;
     width: 70%;
@@ -296,7 +425,80 @@ body {
     height: 24rem;
   }
   .texto_envio {
-    font-size: 18px;
+    font-size: 25px;
+    margin-top: 60px;
+  }
+  .horario_redes {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .horario_redes .semana_horario {
+    width: 100%;
+  }
+  .horario_redes .finde_horario {
+    width: 100%;
+  }
+  #img_nosotros {
+    height: 500px;
+    padding: 10px;
+    width: 50%;
+  }
+}
+@media (max-width: 610px) {
+  #img_nosotros {
+    height: 500px;
+    padding: 20px;
+    width: 50%;
+  }
+  #img_nosotros2 {
+    padding: 20px;
+  }
+  .logo {
+    padding: 5px;
+  }
+  #marca {
+    width: 400px;
+  }
+  .nav_ul {
+    font-size: 24px;
+  }
+}
+@media (min-width: 950px) {
+  .intro {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .intro1 {
+    width: 100%;
+    text-align: center;
+  }
+  .intro2 {
+    width: 100%;
+    text-align: center;
+  }
+  .intro3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 990px) {
+  #img_nosotros {
+    height: 500px;
+    padding: 10px;
+    width: 50%;
+  }
+}
+@media (max-width: 956px) {
+  .productos .tajeta {
+    height: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .nav_ul li {
+    font-size: 22px;
+  }
+  .logo #marca {
+    width: 400px;
   }
 }
 

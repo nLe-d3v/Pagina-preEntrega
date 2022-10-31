@@ -1,0 +1,19 @@
+{
+  "name": "pagina-preentrega",
+  "version": "1.0.0",
+  "description": "Esta es mi pagina web para CoderHouse , plataforma en la cual estoy aprendiendo desarrollo web.\r A medida que avanza el curso voy subiendo cada actualizacion de mi codigo como : cambios en mis paginas\r (HTML), cambios de estilo(CSS) , maquetacion (Boostrap) y entre otras cosas mas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nLe-d3v/Pagina-preEntrega.git"
+  },
+  "author": "nLe_dev (Angel Mansilla)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nLe-d3v/Pagina-preEntrega/issues"
+  },
+  "homepage": "https://github.com/nLe-d3v/Pagina-preEntrega#readme"
+}

@@ -1,0 +1,437 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-image: url(../assets/fondo/body_fondo.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.header {
+  transition-duration: 2s;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  padding: 10px;
+}
+
+.nav_ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  font-size: 30px;
+}
+.nav_ul li {
+  margin-top: 4%;
+  font-weight: bold;
+  font-style: italic;
+}
+.nav_ul li > a {
+  color: white;
+  text-decoration: none;
+}
+.nav_ul li > a:hover {
+  color: black;
+  font-size: 25px;
+  transition-duration: 0.5s;
+}
+
+.intro {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#intro1 {
+  color: white;
+  line-height: 35px;
+  font-size: 20px;
+  text-align: center;
+  transition-duration: 1.5s;
+  padding: 50px;
+}
+
+#intro2 {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  line-height: 35px;
+  transition-duration: 1.5s;
+  padding: 50px;
+}
+
+#intro3 {
+  color: white;
+  font-size: 20px;
+  line-height: 35px;
+  padding: 50px;
+}
+#intro3 > p {
+  text-align: center;
+}
+
+.horario_redes {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.434);
+}
+.horario_redes .horario {
+  display: flex;
+  flex-flow: row wrap;
+}
+.horario_redes .redes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.horario_redes .horario_titulo {
+  text-align: center;
+  width: 100%;
+  margin: 20px;
+}
+.horario_redes .semana_horario {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.horario_redes .finde_horario {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.texto_pie {
+  color: black;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.redes {
+  color: black;
+  text-align: center;
+  width: 50%;
+  padding-top: 10px;
+}
+.redes .redes_link {
+  color: black;
+  text-decoration: none;
+  margin-top: 5px;
+}
+.redes #redes_icon {
+  width: 40px;
+  height: 40px;
+}
+.redes .redes_div {
+  padding: 10px;
+}
+
+.pie {
+  background-color: black;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie_p {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.botonform_div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.boton_form {
+  height: 40px;
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+}
+
+#marca {
+  width: 600px;
+  height: 100px;
+}
+
+.google-maps {
+  width: 70%;
+  height: 400px;
+}
+
+.texto_envio {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.productos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  gap: 30px;
+}
+
+.tarjeta {
+  width: 20rem;
+  height: 32rem;
+  background-color: rgba(255, 255, 255, 0.301);
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+}
+.tarjeta .img {
+  height: 60%;
+}
+.tarjeta .texto {
+  margin-top: 15px;
+}
+.tarjeta .precio {
+  font-size: 20px;
+}
+.tarjeta .boton_compra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  margin: auto;
+  background-color: black;
+  border-radius: 10px;
+}
+.tarjeta .boton_compra > a {
+  text-decoration: none;
+  color: white;
+}
+
+#img_tarjeta {
+  width: 65%;
+  height: 100%;
+}
+
+.info_titulo {
+  color: white;
+}
+
+#texto_info {
+  color: white;
+  font-size: 20px;
+}
+
+.img_nosotros_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+}
+
+.img_nosotros_div2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+}
+
+#img_nosotros {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 20px;
+}
+
+#img_nosotros2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 20px;
+}
+
+@media (max-width: 405px) {
+  .texto_info {
+    font-size: 10px;
+  }
+}
+@media (max-width: 440px) {
+  #marca {
+    width: 60%;
+    height: 85px;
+  }
+  #redes_icon {
+    width: 20px;
+    height: 20px;
+  }
+  .boton_form {
+    height: 40px;
+    width: 70%;
+  }
+  .tarjeta {
+    width: 18rem;
+    height: 24rem;
+  }
+  .texto_envio {
+    font-size: 18px;
+  }
+  .img_nosotros_div {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+  }
+  .img_nosotros_div2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    margin: 6px;
+  }
+  #img_nosotros {
+    height: 100%;
+    object-fit: cover;
+  }
+  #img_nosotros2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #intro1 {
+    font-size: 10px;
+    padding: 15px;
+    line-height: 23px;
+  }
+  #intro2 {
+    font-size: 10px;
+    padding: 15px;
+    line-height: 23px;
+  }
+  #intro3 {
+    font-size: 10px;
+    padding: 15px;
+    line-height: 23px;
+  }
+  .nav_ul {
+    font-size: 15px;
+    gap: 15px;
+    padding: 2px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    text-align: center;
+  }
+  .redes .redes_div {
+    padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 839px) {
+  .nav_ul {
+    gap: 20px;
+    padding: 10px;
+    margin: 0;
+  }
+  .boton_form {
+    height: 60px;
+    width: 70%;
+  }
+  .tarjeta {
+    width: 18rem;
+    height: 24rem;
+  }
+  .texto_envio {
+    font-size: 18px;
+  }
+  .horario_redes {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .horario_redes .semana_horario {
+    width: 100%;
+  }
+  .horario_redes .finde_horario {
+    width: 100%;
+  }
+  #img_nosotros {
+    height: 500px;
+    padding: 10px;
+    width: 50%;
+  }
+}
+@media (max-width: 610px) {
+  #img_nosotros {
+    height: 500px;
+    padding: 20px;
+    width: 50%;
+  }
+  #img_nosotros2 {
+    padding: 20px;
+  }
+  .logo {
+    padding: 5px;
+  }
+  #marca {
+    width: 400px;
+  }
+  .nav_ul {
+    font-size: 24px;
+  }
+}
+@media (min-width: 950px) {
+  .intro {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .intro1 {
+    width: 100%;
+    text-align: center;
+  }
+  .intro2 {
+    width: 100%;
+    text-align: center;
+  }
+  .intro3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 990px) {
+  #img_nosotros {
+    height: 500px;
+    padding: 10px;
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
