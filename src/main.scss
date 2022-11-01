@@ -164,15 +164,15 @@ body {
     }
 
     .redes {
+        @include flex-row();
+        justify-content: space-around;
+        align-items: center;
         color: $negro;
         text-align: center;
         width: 50%;
-        padding-top: 23px;
-
         .redes_link {
             color: $negro;
             text-decoration: none;
-            margin-top: 5px;
         }
 
         #redes_icon {
@@ -384,18 +384,15 @@ body {
         }
     }
 
-    #redes_icon {
-        width: 20px;
-        height: 20px;
+    .botonform_div{
+        .boton_form {
+            height: 40px;
+            width: 50%;
+        }
     }
-
-    .boton_form {
-        height: 40px;
-        width: 70%;
-    }
-
+    
     .tarjeta {
-        width: 18rem;
+        width: 20rem;
         height: 26rem;
 
         .texto>h4 {
@@ -473,11 +470,17 @@ body {
         text-align: center;
     }
 
-    .redes {
-        .redes_div {
-            padding: 0px;
-            padding-top: 20px;
-            padding-bottom: 20px;
+    .horario_redes{
+        .redes{
+            width: 100%;
+            flex-flow: column wrap;
+            justify-items: center;
+            align-items: center;
+
+            #redes_icon {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 
