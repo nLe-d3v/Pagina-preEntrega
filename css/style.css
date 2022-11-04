@@ -1,3 +1,38 @@
+@keyframes marca {
+  0% {
+    transform: translate(-200%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+@keyframes mover-lista {
+  0% {
+    transform: translate(700%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+@keyframes mover-texto-destacado {
+  0% {
+    transform: translate(400%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+@keyframes texto-envio {
+  0% {
+    color: black;
+  }
+  50% {
+    color: lightgray;
+  }
+  100% {
+    color: white;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -28,14 +63,6 @@ body {
   animation-name: marca;
 }
 
-@keyframes marca {
-  0% {
-    transform: translate(-200%);
-  }
-  100% {
-    transform: translate(0%);
-  }
-}
 .nav_ul {
   list-style: none;
   display: flex;
@@ -45,16 +72,18 @@ body {
   gap: 40px;
   font-size: 30px;
 }
-.nav_ul li {
+.nav_ul #li {
   margin-top: 4%;
   font-weight: bold;
   font-style: italic;
+  animation-name: mover-lista;
+  animation-duration: 1s;
 }
-.nav_ul li > a {
+.nav_ul #li > a {
   color: white;
   text-decoration: none;
 }
-.nav_ul li > a:hover {
+.nav_ul #li > a:hover {
   color: black;
   font-size: 25px;
   transition-duration: 0.5s;
@@ -75,33 +104,25 @@ body {
 }
 
 #intro2 {
-  text-align: center;
   color: white;
-  font-size: 22px;
   line-height: 35px;
+  font-size: 22px;
+  text-align: center;
   transition-duration: 1.5s;
   padding: 50px;
 }
 
-#intro3 {
-  color: white;
-  font-size: 22px;
-  line-height: 35px;
-  padding: 50px;
-}
-#intro3 > p {
-  text-align: center;
-}
-
 .texto_destacados {
   display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.434);
   width: 100%;
   height: 70px;
   color: white;
-  justify-content: center;
-  align-items: center;
+  animation-name: mover-texto-destacado;
+  animation-duration: 1s;
 }
 
 .horario_redes {
@@ -215,12 +236,16 @@ body {
   margin-top: 20px;
   padding: 10px;
 }
+.texto_envio .titulo_descuento {
+  animation-name: texto-envio;
+  animation-duration: 2s;
+}
 
 .productos {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  flex-flow: row wrap;
   margin-left: 10%;
   margin-right: 10%;
   gap: 30px;
@@ -343,8 +368,12 @@ body {
     display: flex;
     flex-flow: column;
     width: 100%;
-    height: 500px;
+    height: 100%;
     padding: 0px;
+  }
+  .img_nosotros_div #img_nosotros {
+    width: 100%;
+    height: 50%;
   }
   .img_nosotros_div2 {
     display: flex;
@@ -407,7 +436,7 @@ body {
     padding-top: 30px;
   }
   .historia #texto_info {
-    font-size: 12px;
+    font-size: 15px;
   }
   .google-map > p {
     font-size: 15px;
@@ -466,6 +495,14 @@ body {
     font-size: 24px;
   }
 }
+@media (max-width: 600px) {
+  .nav_ul li {
+    font-size: 22px;
+  }
+  .logo #marca {
+    width: 400px;
+  }
+}
 @media (min-width: 950px) {
   .intro {
     display: flex;
@@ -494,14 +531,6 @@ body {
 @media (max-width: 956px) {
   .productos .tajeta {
     height: 200px;
-  }
-}
-@media (max-width: 600px) {
-  .nav_ul li {
-    font-size: 22px;
-  }
-  .logo #marca {
-    width: 400px;
   }
 }
 

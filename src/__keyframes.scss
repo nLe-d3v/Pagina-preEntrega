@@ -1,0 +1,42 @@
+@keyframes marca {
+    0% {
+        transform: translate(-200%);
+    }
+
+    100% {
+        transform: translate(0%);
+
+    }
+}
+@keyframes mover-lista {
+    0% {
+        transform: translate(700%);
+    }
+
+    100% {
+        transform: translate(0%);
+    }
+}
+@keyframes mover-texto-destacado {
+    0% {
+        transform: translate(400%);
+    }
+
+    100% {
+        transform: translate(0%);
+    }
+}
+
+@keyframes texto-envio{
+    0%{
+        color:black;
+    }
+
+    50%{
+        color: lightgray;
+    }
+
+    100%{
+        color:white;
+    }
+}

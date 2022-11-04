@@ -1,20 +1,10 @@
-// Mixins
-
-@mixin flex-row {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-// ------------------------------------
-
-// Variables
-
-$gris-transparente :rgba(255, 255, 255, 0.434);
-$negro : black;
-$blanco: white;
+// Imports
+@import "_mixins";
+@import "_variable";
+@import "_keyframes";
 
 // -------------------------------------
-* {
+*{
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -27,7 +17,6 @@ body {
 }
 
 // -------------INDEX------------
-
 .header {
     transition-duration: 2s;
     @include flex-row();
@@ -46,17 +35,6 @@ body {
     }
 }
 
-@keyframes marca {
-    0% {
-        transform: translate(-200%);
-    }
-
-    100% {
-        transform: translate(0%);
-
-    }
-}
-
 .nav_ul {
     list-style: none;
     @include flex-row();
@@ -65,13 +43,15 @@ body {
     gap: 40px;
     font-size: 30px;
 
-    li {
+    #li {
         margin-top: 4%;
         font-weight: bold;
         font-style: italic;
+        animation-name: mover-lista;
+        animation-duration: 1s;
     }
 
-    li>a {
+    #li>a {
         color: $blanco;
         text-decoration: none;
 
@@ -82,52 +62,29 @@ body {
         }
     }
 }
-
 .intro {
     margin-top: 20px;
     padding: 10px;
 }
 
 #intro1 {
-    color: $blanco;
-    line-height: 35px;
-    font-size: 22px;
-    text-align: center;
-    transition-duration: 1.5s;
-    padding: 50px;
+    @include intro-style();
 }
 
 #intro2 {
-    text-align: center;
-    color: $blanco;
-    font-size: 22px;
-    line-height: 35px;
-    transition-duration: 1.5s;
-    padding: 50px;
-}
-
-#intro3 {
-    color: $blanco;
-    font-size: 22px;
-    line-height: 35px;
-    padding: 50px;
-
-    &>p {
-        text-align: center;
-    }
+    @include intro-style();
 }
 
 .texto_destacados {
-    display: flex;
+    @include flex-center();
     text-align: center;
     background-color: $gris-transparente;
     width: 100%;
     height: 70px;
     color: $blanco;
-    justify-content: center;
-    align-items: center;
+    animation-name: mover-texto-destacado;
+    animation-duration: 1s;
 }
-
 .horario_redes {
     color: $negro;
     background-color: $gris-transparente;
@@ -148,19 +105,11 @@ body {
     }
 
     .semana_horario {
-        width: 50%;
-        text-align: center;
-        padding-bottom: 15px;
-        padding-top: 15px;
-        font-size: 20px;
+        @include horario-style();
     }
 
     .finde_horario {
-        width: 50%;
-        text-align: center;
-        padding-bottom: 15px;
-        padding-top: 15px;
-        font-size: 20px;
+        @include horario-style();
     }
 
     .redes {
@@ -170,6 +119,7 @@ body {
         color: $negro;
         text-align: center;
         width: 50%;
+
         .redes_link {
             color: $negro;
             text-decoration: none;
@@ -185,25 +135,17 @@ body {
         }
     }
 }
-
 .texto_pie {
     color: $negro;
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
 }
-
-
-
 .pie {
     background-color: $negro;
     height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
 }
-
-
 .pie_p {
     color: $blanco;
     font-weight: bold;
@@ -212,8 +154,6 @@ body {
 }
 
 // ---CONTACTO-----------------
-
-
 .botonform_div {
     display: flex;
     justify-content: center;
@@ -222,7 +162,6 @@ body {
     padding: 10px;
     margin-top: 15px;
 }
-
 .boton_form {
     height: 40px;
     width: 100%;
@@ -231,23 +170,17 @@ body {
     background-color: $blanco;
     color: $negro;
 }
-
-
 .google-maps {
     width: 70%;
     height: 400px;
 }
-
 .google-map {
     font-size: 25px;
     color: $blanco;
 }
-
 // ---------------------------------------
 
-
 // ------PRODUCTOS----------
-
 .texto_envio {
     text-align: center;
     color: $blanco;
@@ -255,13 +188,15 @@ body {
     font-size: 30px;
     margin-top: 20px;
     padding: 10px;
+    
+    .titulo_descuento{
+        animation-name: texto-envio;
+        animation-duration: 2s;
+    }
 }
-
 .productos {
-    display: flex;
+    @include flex-center();
     flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
     margin-left: 10%;
     margin-right: 10%;
     gap: 30px;
@@ -276,23 +211,17 @@ body {
     border-radius: 8px;
     padding: 10px;
     color: $blanco;
-
     .img {
         height: 60%;
     }
-
     .texto {
         margin-top: 15px;
     }
-
     .precio {
         font-size: 20px;
     }
-
     .boton_compra {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center();
         width: 50%;
         height: 40px;
         margin: auto;
@@ -306,8 +235,6 @@ body {
         }
     }
 }
-
-
 #img_tarjeta {
     width: 65%;
     height: 100%;
@@ -317,7 +244,7 @@ body {
 
 // NOSOTROS
 
-.historia{
+.historia {
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -336,295 +263,28 @@ body {
 }
 
 .img_nosotros_div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 600px;
-    padding: 10px;
+    @include flex-center();
+    @include nosotros-img-div()
 }
 
 .img_nosotros_div2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 600px;
-    padding: 10px;
+    @include flex-center();
+    @include nosotros-img-div()
 }
 
 #img_nosotros {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    @include nosotros-img();
 }
 
 #img_nosotros2 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    @include nosotros-img();
 }
-
 
 // --------------------------------------------------
 
 //MEDIAS --------------------------------------------------------
-// Me quede modificando la imagen de la marca , haciendo responsive al site
-
-
-@media (max-width: 440px) {
-    .header {
-        .logo {
-            width: 100%;
-
-            #marca {
-                width: 90%;
-                height: 65px;
-            }
-        }
-    }
-
-    .botonform_div{
-        .boton_form {
-            height: 40px;
-            width: 50%;
-        }
-    }
-    
-    .tarjeta {
-        width: 20rem;
-        height: 26rem;
-
-        .texto>h4 {
-            font-size: 18px;
-        }
-
-        .precio>p {
-            font-size: 18px;
-        }
-    }
-
-    .texto_envio {
-        .titulo_descuento {
-            font-size: 16px;
-        }
-    }
-
-    .img_nosotros_div {
-        display: flex;
-        flex-flow: column;
-        width: 100%;
-        height: 500px;
-        padding: 0px;
-    }
-
-    .img_nosotros_div2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 400px;
-        margin: 6px;
-    }
-
-
-    #img_nosotros2 {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    #intro1 {
-        font-size: 10px;
-        padding: 10px;
-        line-height: 23px;
-    }
-
-    #intro2 {
-        font-size: 10px;
-        padding: 10px;
-        line-height: 23px;
-    }
-
-    #intro3 {
-        font-size: 10px;
-        padding: 10px;
-        line-height: 23px;
-    }
-
-    .nav {
-        .nav_ul {
-            gap: 15px;
-            padding: 2px;
-            flex-flow: column wrap;
-            justify-content: center;
-            align-items: center;
-
-            .boton_nav {
-                font-size: 18px;
-            }
-        }
-    }
-
-    .logo {
-        text-align: center;
-    }
-
-    .horario_redes{
-        .redes{
-            width: 100%;
-            flex-flow: column wrap;
-            justify-items: center;
-            align-items: center;
-
-            #redes_icon {
-                width: 30px;
-                height: 30px;
-            }
-        }
-    }
-
-    .texto_index {
-        font-size: 15px;
-    }
-
-    .tarjeta {
-        .boton_compra>a {
-            font-size: 15px;
-        }
-
-    }
-
-    .historia{
-        padding-top: 30px;
-        #texto_info{
-            font-size: 12px;
-        }
-    }
-
-    .google-map>p{
-        font-size: 15px;
-    }
-}
-
-
-@media (max-width:839px) {
-
-    .nav_ul {
-        gap: 20px;
-        padding: 10px;
-        margin: 0;
-    }
-
-    .boton_form {
-        height: 60px;
-        width: 70%;
-    }
-
-    .tarjeta {
-        width: 18rem;
-        height: 24rem;
-    }
-
-    .texto_envio {
-        font-size: 25px;
-        margin-top: 60px;
-    }
-
-    .horario_redes {
-        display: flex;
-        flex-flow: column wrap;
-
-        .semana_horario {
-            width: 100%;
-
-        }
-
-        .finde_horario {
-            width: 100%;
-        }
-    }
-
-    #img_nosotros {
-        height: 500px;
-        padding: 10px;
-        width: 50%;
-    }
-}
-
-@media (max-width:610px) {
-    #img_nosotros {
-        height: 500px;
-        padding: 20px;
-        width: 50%;
-    }
-
-    #img_nosotros2 {
-        padding: 20px;
-    }
-
-    .logo {
-        padding: 5px;
-    }
-
-    #marca {
-        width: 400px;
-    }
-
-    .nav_ul {
-        // padding: 0px;
-        font-size: 24px;
-    }
-}
-
-@media (min-width:950px) {
-    .intro {
-        display: flex;
-        flex-flow: column wrap;
-    }
-
-    .intro1 {
-        width: 100%;
-        text-align: center;
-    }
-
-    .intro2 {
-        width: 100%;
-        text-align: center;
-    }
-
-    .intro3 {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-@media (min-width:990px) {
-    #img_nosotros {
-        height: 500px;
-        padding: 10px;
-        width: 50%;
-    }
-}
-
-@media (max-width:956px) {
-    .productos {
-        .tajeta {
-            height: 200px;
-        }
-    }
-}
-
-@media (max-width:600px) {
-    .nav_ul {
-        li {
-            font-size: 22px;
-        }
-    }
-
-    .logo {
-        #marca {
-            width: 400px;
-        }
-    }
-}
+@import "_media440px";
+@import "_media839px";
+@import "_media610px";
+@import "_media600px";
+@import "_media950-990px";

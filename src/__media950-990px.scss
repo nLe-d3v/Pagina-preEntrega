@@ -1,0 +1,32 @@
+
+@media (min-width:950px) {
+    .intro {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .intro1 {
+        @include intro-style-950px();
+    }
+    .intro2 {
+       @include intro-style-950px();
+    }
+    .intro3 {
+        @include intro-style-950px();
+    }
+}
+
+@media (min-width:990px) {
+    #img_nosotros {
+        height: 500px;
+        padding: 10px;
+        width: 50%;
+    }
+}
+
+@media (max-width:956px) {
+    .productos {
+        .tajeta {
+            height: 200px;
+        }
+    }
+}

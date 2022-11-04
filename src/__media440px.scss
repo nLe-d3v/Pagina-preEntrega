@@ -1,0 +1,117 @@
+
+@media (max-width: 440px) {
+    .header {
+        .logo {
+            width: 100%;
+
+            #marca {
+                width: 90%;
+                height: 65px;
+            }
+        }
+    }
+    .botonform_div {
+        .boton_form {
+            height: 40px;
+            width: 50%;
+        }
+    }
+    .tarjeta {
+        width: 20rem;
+        height: 26rem;
+
+        .texto>h4 {
+            font-size: 18px;
+        }
+
+        .precio>p {
+            font-size: 18px;
+        }
+    }
+    .texto_envio {
+        .titulo_descuento {
+            font-size: 16px;
+        }
+    }
+    .img_nosotros_div {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+
+        #img_nosotros {
+            width: 100%;
+            height: 50%;
+        }
+    }
+    .img_nosotros_div2 {
+        @include flex-center();
+        width: 100%;
+        height: 400px;
+        margin: 6px;
+    }
+    #img_nosotros2 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #intro1 {
+        @include intro-style-440px();
+    }
+    #intro2 {
+        @include intro-style-440px();
+    }
+    #intro3 {
+        @include intro-style-440px();
+    }
+    .nav {
+        .nav_ul {
+            gap: 15px;
+            padding: 2px;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+
+            .boton_nav {
+                font-size: 18px;
+            }
+        }
+    }
+    .logo {
+        text-align: center;
+    }
+    .horario_redes {
+        .redes {
+            width: 100%;
+            flex-flow: column wrap;
+            justify-items: center;
+            align-items: center;
+
+            #redes_icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .texto_index {
+        font-size: 15px;
+    }
+
+    .tarjeta {
+        .boton_compra>a {
+            font-size: 15px;
+        }
+
+    }
+    .historia {
+        padding-top: 30px;
+
+        #texto_info {
+            font-size: 15px;
+        }
+    }
+    .google-map>p {
+        font-size: 15px;
+    }
+}

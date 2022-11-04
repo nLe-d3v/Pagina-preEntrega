@@ -1,0 +1,43 @@
+@media (max-width:839px) {
+
+    .nav_ul {
+        gap: 20px;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .boton_form {
+        height: 60px;
+        width: 70%;
+    }
+
+    .tarjeta {
+        width: 18rem;
+        height: 24rem;
+    }
+
+    .texto_envio {
+        font-size: 25px;
+        margin-top: 60px;
+    }
+
+    .horario_redes {
+        display: flex;
+        flex-flow: column wrap;
+
+        .semana_horario {
+            width: 100%;
+
+        }
+
+        .finde_horario {
+            width: 100%;
+        }
+    }
+
+    #img_nosotros {
+        height: 500px;
+        padding: 10px;
+        width: 50%;
+    }
+}
