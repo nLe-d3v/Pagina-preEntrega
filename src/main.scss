@@ -50,11 +50,9 @@ body {
         animation-name: mover-lista;
         animation-duration: 1s;
     }
-
     #li>a {
         color: $blanco;
         text-decoration: none;
-
         &:hover {
             color: $negro;
             font-size: 25px;
@@ -191,7 +189,7 @@ body {
     
     .titulo_descuento{
         animation-name: texto-envio;
-        animation-duration: 2s;
+        animation-duration: 3s;
     }
 }
 .productos {
@@ -243,12 +241,10 @@ body {
 // ---------------------------------------------------------------
 
 // NOSOTROS
-
 .historia {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-
 .info_titulo {
     color: $blanco;
 }
@@ -257,7 +253,6 @@ body {
     color: $blanco;
     font-size: 20px;
 }
-
 #row_nosotros {
     background-color: $gris-transparente;
 }

@@ -26,9 +26,6 @@
   0% {
     color: black;
   }
-  50% {
-    color: lightgray;
-  }
   100% {
     color: white;
   }
@@ -238,7 +235,7 @@ body {
 }
 .texto_envio .titulo_descuento {
   animation-name: texto-envio;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 
 .productos {
@@ -398,11 +395,6 @@ body {
     padding: 10px;
     line-height: 23px;
   }
-  #intro3 {
-    font-size: 10px;
-    padding: 10px;
-    line-height: 23px;
-  }
   .nav .nav_ul {
     gap: 15px;
     padding: 2px;
@@ -436,7 +428,7 @@ body {
     padding-top: 30px;
   }
   .historia #texto_info {
-    font-size: 15px;
+    font-size: 18px;
   }
   .google-map > p {
     font-size: 15px;

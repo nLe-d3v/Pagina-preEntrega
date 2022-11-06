@@ -62,9 +62,6 @@
     #intro2 {
         @include intro-style-440px();
     }
-    #intro3 {
-        @include intro-style-440px();
-    }
     .nav {
         .nav_ul {
             gap: 15px;
@@ -108,7 +105,7 @@
         padding-top: 30px;
 
         #texto_info {
-            font-size: 15px;
+            font-size: 18px;
         }
     }
     .google-map>p {
